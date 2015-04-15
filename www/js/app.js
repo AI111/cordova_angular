@@ -7,9 +7,16 @@
         };
     });
 
-    app.controller('StoreController',function(){
-        this.products=gems;
-    });
+    app.controller('StoreController',['$http', function ($http) {
+        var store = this;
+        store.products=[];
+        $http.get('products.json').success(function(data){
+            //store.product.push(data);// = data;
+            StoreController.products.push(data);
+
+            console.log(JSON.stringify(data));
+        });;
+    }]);
 
     var gems=[{
         name: 'Dodecahedron',
