@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<div ng-show="product.images.length">
+    <div >
+        <img ng-src="images/{{product.images[gallery.current]}}"/>
+    </div>
+    <div class="container-fluid">
+        <div class=" img-responsive col-sm-2 co2-md-2 col-lg-2 col-xs4" ng-repeat="image in product.images">
+            <img class="img-responsive" ng-src="images/{{image}}"/>
+        </div>
+    </div>
+    <!--<ul class="img-thumbnails clearfix">-->
+
+        <!--<li  ng-repeat="image in product.images">-->
+            <!--<div class="wrapper col-md-3">-->
+                <!--<img ng-src="images/{{image}}"/>-->
+            <!--</div>-->
+
+        <!--</li>-->
+    <!--</ul>-->
+</div>
